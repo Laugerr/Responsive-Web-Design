@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+    <title>Surver Form</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" >
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="title">Travel Survey Form</h1>
+      <p id="description">Please fill out the form below:</p>
+    </div>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Your Info</legend>
+        <label for="name" id="name-label">Name: <input type="text" id="name" name="name" placeholder="Enter your name" required/></label>
+        <label for="email" id="email-label">Email: <input type="email" id="email" name="email" placeholder="Enter your email" required/></label>
+        <label for="number" id="number-label">Age:(Optional) <input type="number" id="number" name="number" placeholder="Enter a number" min="13" max="120"/></label>
+      </fieldset>
+      <fieldset>
+        <legend>Meal Preference</legend>
+        <label for="non-veg"><input type="radio" id="non-veg" name="meal" value="non-vegetarian" class="inline" checked>Non-Vegetarian</label>
+        <label for="veg"><input type="radio" id="veg" name="meal" value="vegetarian" class="inline">Vegetarian</label>
+        <label for="vegan"><input type="radio" id="vegan" name="meal" value="vegan" class="inline">Vegan</label>
+      </fieldset>
+      <fieldset>
+        <legend>Travel Class</legend>
+        <label for="economy"><input type="radio" id="economy" name="class" value="economy" class="inline" checked/>Economy</label>
+        <label for="business"><input type="radio" id="business" name="class" value="business" class="inline"/>Business</label>
+        <label for="firstclass"><input type="radio" id="firstclass" name="class" value="first-class" class="inline"/>First Class</label>
+      </fieldset>
+      <fieldset>
+        <legend>Experience</legend>
+        <label for="destination">Destination:</label>
+        <select name="destination" id="destination">
+          <option value="marrackech">Marrakech</option>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="berlin">Berlin</option>
+          <option value="newyork">New York</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="experience">Your Experience:<textarea name="experience" id="experience" cols="30" rows="100"></textarea></label>
+        <label for="pictures"><input type="file"/></label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
