@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ubuntu Documentation</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>
+                <img src="./assets/images/Ubuntu-Logo.png" alt="ubuntu logo" id="navbar-logo">
+                Ubuntu Documentation
+            </header>
+            <ol>
+                <li><a href="#Introduction_to_Ubuntu" class="nav-link">Introduction to Ubuntu</a></li>
+                <li><a href="#Ubuntu_Installation" class="nav-link">Ubuntu Installation</a></li>
+                <li><a href="#Basic_Linux_Commands" class="nav-link">Basic Linux Commands</a></li>
+                <li><a href="#Package_Management" class="nav-link">Package Management</a></li>
+                <li><a href="#User_Management" class="nav-link">User Management</a></li>
+                <li><a href="#File_Permissions" class="nav-link">File Permissions</a></li>
+                <li><a href="#File_System_Hierarchy" class="nav-link">File System Hierarchy</a></li>
+                <li><a href="#Networking" class="nav-link">Networking</a></li>
+                <li><a href="#SSH_and_Remote_Access" class="nav-link">SSH and Remote Access</a></li>
+                <li><a href="#Process_Management" class="nav-link">Process Management</a></li>
+                <li><a href="#System_Updates_and_Upgrades" class="nav-link">System Updates and Upgrades</a></li>
+                <li><a href="#Disk_Usage_and_Management" class="nav-link">Disk Usage and Management</a></li>
+                <li><a href="#Backup_and_Restore" class="nav-link">Backup and Restore</a></li>
+                <li><a href="#Monitoring_and_Performance_Tuning" class="nav-link">Monitoring and Performance Tuning</a></li>
+                <li><a href="#Security_and_User_Authentication" class="nav-link">Security and User Authentication</a></li>
+                <li><a href="#Web_Server_Setup_(Apache)" class="nav-link">Web Server Setup (Apache)</a></li>
+                <li><a href="#Database_Setup_(MySQL)" class="nav-link">Database Setup (MySQL)</a></li>
+                <li><a href="#Version_Control_with_Git" class="nav-link">Version Control with Git</a></li>
+                <li><a href="#Containerization_with_Docker" class="nav-link">Containerization with Docker</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction_to_Ubuntu">
+                <header>Introduction to Ubuntu</header>
+                <article>
+                        <p>Ubuntu is a popular Linux distribution known for its user-friendliness and widespread community support. It's based on Debian and provides a versatile and stable platform for various computing needs.</p>
+                        <p>Let's start with a simple terminal command to check the Ubuntu version:</p>
+                        <div class="code-main">
+                            <div class="code-header"><span>hash</span></div>
+                            <code>lsb_release -a</code>
+                        </div>
+                        
+                        <p>Running this command in the terminal will display detailed information about your Ubuntu system, including the distribution version and other details.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Ubuntu_Installation">
+                <header>Ubuntu Installation</header>
+                <article>
+                    <p>Installing Ubuntu is a crucial step to get started with this operating system. In this section, we'll walk through the installation process.</p>
+                    <ol>
+                        <li>
+                            <strong>Download Ubuntu:</strong>
+                            <p>You can download the Ubuntu installation ISO file from the official website: <a href="https://ubuntu.com/download" target="_blank">https://ubuntu.com/download</a>.</p>
+                            </li>
+                        <li>
+                            <strong>Create a Bootable USB:</strong>
+                            <p>To install Ubuntu, you'll need to create a bootable USB drive. You can use a tool like dd or specialized software like Rufus on Windows.</p>
+                        </li>
+                        <li>
+                            <strong>Boot from USB:</strong>
+                            <p>Insert the bootable USB drive into your computer and boot from it. You might need to adjust the boot order in your BIOS/UEFI settings.</p>
+                        </li>
+                        <li>
+                            <strong>Install Ubuntu:</strong>
+                            <p>Follow the on-screen instructions to select language, keyboard layout, and disk partitioning. You can choose to install Ubuntu alongside your existing OS or erase the disk and install Ubuntu.</p>
+                        </li>
+                        <li>
+                            <strong>User Setup:</strong>
+                            <p>During the installation, you'll be asked to create a user account and set a password. Follow the prompts to complete the installation.</p>
+                        </li>
+                    </ol>
+                    <p>Once the installation is complete, you'll have Ubuntu up and running on your system.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Basic_Linux_Commands">
+                <header>Basic Linux Commands</header>
+                <article>
+                    <p>Understanding basic Linux commands is essential for efficient navigation and operation within the Ubuntu terminal.</p>
+                    <ol>
+                        <li>
+                            <strong>List Files and Directories (`ls`):</strong>
+                            <p>The ls command is used to list files and directories in the current directory.</p> 
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ls</code>
+                            </div>
+                            <p>This will display a list of files and directories in the current directory.</p>
+                        </li>
+                        <li>
+                            <strong>Change Directory (`cd`):</strong>
+                            <p>The `cd` command is used to change your current directory.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>cd directory_name</code>
+                            </div>
+                            <p>Replace `directory_name` with the name of the directory you want to enter.</p></li>
+                        <li>
+                            <strong>Present Working Directory (`pwd`):</strong>
+                            <p>The pwd command shows the current working directory.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>pwd</code>
+                            </div>
+                            <p>Running this command will display the full path to your current directory.</p></li>
+                        <li>
+                            <strong>Make Directory (`mkdir`):</strong>
+                            <p>The mkdir command is used to create a new directory.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>mkdir new_directory_name</code>
+                            </div>
+                            <p>Replace `new_directory_name` with the desired name of the new directory.</p></li>
+                        <li>
+                            <strong>Create a File (`touch`):</strong>
+                            <p>The `touch` command creates an empty file.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>touch new_file.txt</code>
+                            </div>
+                            <p>This command will create a new empty text file named `new_file`.txt.</p>
+                        </li>
+                    </ol>
+                    <p>These are some of the basic Linux commands you'll frequently use in Ubuntu. They provide essential functionality for navigating and managing your system.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Package_Management">
+                <header>Package Management</header>
+                <article>
+                    <p>Package management is a vital aspect of Ubuntu, allowing you to easily install, update, and remove software.</p>
+                    <p>In this section, we'll explore package management using the `apt` package manager.</p>
+                    <ol>
+                        <li>
+                            <strong>Update Package Lists (apt update):</strong>
+                            <p>To ensure you have the latest package information, run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt update</code>
+                            </div>
+                            <p>This command refreshes the package lists from the repositories.</p>
+                        </li>
+                        <li>
+                            <strong>Install a Package (apt install): </strong>
+                            <p>To install a package, use the apt install command. Replace package_name with the name of the package you want to install.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install package_name</code>
+                            </div>
+                            <p>For example, to install the text editor "Nano," you can run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install package_name</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Remove a Package (apt remove): </strong>
+                            <p>To uninstall a package, use the apt remove command. Replace package_name with the name of the package you want to remove.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt remove package_name</code>
+                            </div>
+                            <p>For example, to remove the "Nano" text editor, you can run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt remove nano</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Upgrade Packages (apt upgrade):</strong>
+                            <p>To upgrade installed packages to their latest versions, use the apt upgrade command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt upgrade</code>
+                            </div>
+                            <br>This will update all installed packages to their latest versions.
+                        </li>
+                        <li>
+                            <strong>Search for a Package (apt search):</strong>
+                            <p>To search for a package by name or keyword, use the apt search command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>apt search keyword</code>
+                            </div>
+                            <br>Replace keyword with the term you want to search for.
+                        </li>
+                    </ol>
+                    <p>These are some of the fundamental package management commands in Ubuntu. They are essential for managing software on your system.</p>
+                </article>
+            </section>
+            <section class="main-section" id="User_Management">
+                <header>User Management</header>
+                <article>
+                    <p>Managing users and groups is an essential part of system administration in Ubuntu.</p>
+                    <p>In this section, we'll explore user management tasks.</p>
+                    <ol>
+                        <li>
+                            <strong>Create a User (adduser):</strong>
+                            <p>To create a new user, use the adduser command. Replace username with the desired username.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo adduser username</code>
+                            </div>
+                            <p>You'll be prompted to set a password and provide additional user information.</p>
+                        </li>
+                        <li>
+                            <strong>Delete a User (userdel):</strong>
+                            <p>To delete a user, use the userdel command. Replace username with the username you want to delete.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo userdel -r username</code>
+                            </div>
+                            <p>The -r option removes the user's home directory and files.</p>
+                        </li>
+                        <li>
+                            <strong>Change User Password (passwd):</strong>
+                            <p>To change a user's password, use the passwd command. Replace username with the username you want to change the password for.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo passwd username</code>
+                            </div>
+                            <p>You'll be prompted to enter the new password.</p>
+                        </li>
+                        <li>
+                            <strong>Add User to a Group (usermod):</strong>
+                            <p>To add a user to a group, use the usermod command. Replace username with the username and groupname with the group you want to add the user to.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo usermod -aG groupname username</code>
+                            </div>
+                            <p>The -aG options add the user to the specified group.</p>
+                        </li>
+                        <li>
+                            <strong>List Users (getent):</strong>
+                            <p>To list all users on the system, you can use the getent command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>getent passwd</code>
+                            </div>
+                            <p>This will display a list of all user accounts on the system.</p>
+                        </li>
+                    </ol>
+                    <p>User management is crucial for controlling access and permissions on your Ubuntu system. These commands are fundamental for managing users and groups effectively.</p>
+                </article>
+            </section>
+            <section class="main-section" id="File_Permissions">
+                <header>File Permissions</header>
+                <article>
+                    <p>Understanding and managing file permissions is crucial for controlling access to files and directories in Ubuntu.</p>
+                    <p>Now let's delve into how to work with file permissions:</p>
+                    <ol>
+                        <li>
+                            <strong>View File Permissions (ls):</strong>
+                            <p>To view the permissions of files and directories in a directory, use the ls command with the -l option.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ls -l</code>
+                            </div>
+                            <p>This will display detailed information about files, including permissions.</p>
+                        </li>
+                        <li>
+                            <strong>Change File Permissions (chmod):</strong>
+                            <p>To change file permissions, use the chmod command. You can specify permissions using numerical values or symbolic notation.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>chmod 644 filename</code>
+                            </div>
+                            <p>This command sets read and write permissions for the file owner and read-only permissions for others.</p>
+                        </li>
+                        <li>
+                            <strong>Change Ownership (chown):</strong>
+                            <p>To change the ownership of a file or directory, use the chown command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo chown new_owner:new_group filename</code>
+                            </div>
+                            <p>Replace new_owner with the new owner's username and new_group with the new group name.</p>
+                        </li>
+                        <li>
+                            <strong>Change Group Ownership (chgrp):</strong>
+                            <p>To change the group ownership of a file or directory, use the chgrp command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo chgrp new_group filename</code>
+                            </div>
+                            <p>Replace new_group with the new group name.</p>
+                        </li>
+                    </ol>
+                    <p>File permissions and ownership are essential for security and access control in Ubuntu. Properly managing them ensures that only authorized users can access and modify files.</p>
+                </article>
+            </section>
+            <section class="main-section" id="File_System_Hierarchy">
+                <header>File System Hierarchy</header>
+                <article>
+                    <p>Understanding the file system hierarchy in Ubuntu is essential for locating and organizing files and directories effectively.</p>
+                    <p>In this section, we'll explore the Linux file system hierarchy:</p>
+                    <ol>
+                        <li>
+                            <strong>View the Root Directory (/):</strong>
+                            <p>To view the contents of the root directory, you can use the ls command with the / symbol.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ls /</code>
+                            </div>
+                            <p>This will display a list of directories and files at the root level.</p>
+                        </li>
+                        <li>
+                            <strong>Explore Subdirectories:</strong>
+                            <p>You can navigate through the file system hierarchy by using the cd command to change directories.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>cd /directory_name</code>
+                            </div>
+                            <p>Replace directory_name with the name of the directory you want to explore.</p>
+                        </li>
+                        <li>
+                            <strong>Understand Common Directories:</strong>
+                            <p>Learn about common directories in the Linux file system, such as /bin, /etc, /home, /var, and /usr. These directories play essential roles in the system.</p>
+                        </li>
+                    </ol>
+                    <p>The file system hierarchy in Linux is a tree-like structure that organizes files and directories. Understanding this structure is key to efficient file management and system administration.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Networking">
+                <header>Networking</header>
+                <article>
+                    <p>Understanding networking is crucial for configuring your Ubuntu system to connect to networks and the internet.</p>
+                    <p>In this section, we'll explore some common networking tasks:</p>
+                    <ol>
+                        <li>
+                            <strong>Check Network Configuration (ip and ifconfig):</strong>
+                            <p>You can use the ip and ifconfig commands to view network configuration information.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ip addr show</code>
+                            </div>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ifconfig</code>
+                            </div>
+                            <p>These commands display details about your network interfaces, including IP addresses and MAC addresses.</p>
+                        </li>
+                        <li>
+                            <strong>Ping a Host (ping):</strong>
+                            <p>The ping command allows you to test network connectivity to a remote host.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ping google.com</code>
+                            </div>
+                            <p>This command sends ICMP echo requests to google.com to check if it's reachable.</p>
+                        </li>
+                        <li>
+                            <strong>Configure DNS (/etc/resolv.conf):</strong>
+                            <p>You can configure DNS settings in the /etc/resolv.conf file.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo nano /etc/resolv.conf</code>
+                            </div>
+                            <p>Edit this file to specify DNS server addresses.</p>
+                        </li>
+                        <li>
+                            <strong>Network Configuration Files (/etc/network/interfaces):</strong>
+                            <p>Network settings can be configured in the /etc/network/interfaces file.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo nano /etc/network/interfaces</code>
+                            </div>
+                            <p>Here, you can define network interface settings such as IP address, netmask, gateway, etc.</p>
+                        </li>
+                    </ol>
+                    <p>Networking is fundamental to connecting your Ubuntu system to networks and the internet. These commands and configurations will help you manage network connectivity effectively.</p>
+                </article>
+            </section>
+            <section class="main-section" id="SSH_and_Remote_Access">
+                <header>SSH and Remote Access</header>
+                <article>
+                    <p>SSH (Secure Shell) is a critical protocol for remote access to Ubuntu systems. Understanding SSH and how to configure it is important for remote administration.</p>
+                    <p>In this section, we'll explore SSH and remote access:</p>
+                    <ol>
+                        <li>
+                            <strong>Install OpenSSH Server (ssh):</strong>
+                            <p>To install the OpenSSH server, which allows remote SSH access, use the apt package manager.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install openssh-server</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Start and Enable SSH Service:</strong>
+                            <p>You can start and enable the SSH service to ensure it starts automatically at boot.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl start ssh<br>sudo systemctl enable ssh</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Connect to a Remote Server (ssh):</strong>
+                            <p>To connect to a remote server over SSH, use the ssh command, specifying the username and IP address or hostname.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ssh username@remote_ip</code>
+                            </div>
+                            <p>Replace username with your remote username and remote_ip with the server's IP address or hostname.</p>
+                        </li>
+                        <li>
+                            <strong>Generate SSH Key Pair (ssh-keygen):</strong>
+                            <p>You can generate an SSH key pair for secure authentication.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ssh-keygen -t rsa</code>
+                            </div>
+                            <p>This command generates an SSH key pair (public and private keys) that you can use for secure login.</p>
+                        </li>
+                        <li>
+                            <strong>Copy SSH Public Key (ssh-copy-id):</strong>
+                            <p>To copy your SSH public key to a remote server for passwordless login, use ssh-copy-id.</p>
+                            <code>ssh-copy-id username@remote_ip</code>
+                            <p>This command adds your public key to the ~/.ssh/authorized_keys file on the remote server.</p>
+                        </li>
+                    </ol>
+                    <p>SSH is a powerful tool for secure remote access and administration of Ubuntu systems. Properly configuring and using SSH can enhance the security and efficiency of your remote management tasks.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Process_Management">
+                <header>Process Management</header>
+                <article>
+                    <p>Understanding how to manage processes is crucial for monitoring and controlling running applications and services in Ubuntu.</p>
+                    <p>In this section, we'll explore some common process management tasks:</p>
+                    <ol>
+                        <li>
+                            <strong>View Running Processes (ps):</strong>
+                            <p>To view a list of running processes, use the ps command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>ps aux</code>
+                            </div>
+                            <p>This will display detailed information about all running processes.</p>
+                        </li>
+                        <li>
+                            <strong>Kill a Process (kill and pkill):</strong>
+                            <p>You can use the kill command to terminate a process by its PID (Process ID).</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>kill PID</code>
+                            </div>
+                            <p>Replace PID with the actual Process ID.<br>Alternatively, you can use pkill to kill a process by its name.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>pkill process_name</code>
+                            </div>
+                            <p>Replace process_name with the name of the process you want to terminate.</p>
+                        </li>
+                        <li>
+                            <strong>Background and Foreground Jobs (bg, fg, and jobs):</strong>
+                            <p>You can send processes to the background and bring them back to the foreground using the bg and fg commands.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>command_to_run &</code>
+                            </div>
+                            <p>This runs a command in the background.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>bg</code>
+                            </div>
+                            <p>This sends a background job to the foreground.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>fg</code>
+                            </div>
+                            <p>This brings a background job to the foreground.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>jobs</code>
+                            </div>
+                            <p>This lists the background jobs.</p>
+                        </li>
+                        <li>
+                            <strong>System Resource Monitoring (top and htop)</strong>
+                            <p>You can monitor system resources and processes in real-time using the top or htop command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>top</code>
+                            </div>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>htop</code>
+                            </div>
+                            <p>These commands provide information about CPU usage, memory usage, and running processes.</p>
+                        </li>
+                    </ol>
+                    <p>Understanding how to manage processes is essential for troubleshooting and optimizing system performance in Ubuntu.</p>
+                </article>
+            </section>
+            <section class="main-section" id="System_Updates_and_Upgrades">
+                <header>System Updates and Upgrades</header>
+                <article>
+                    <p>Keeping your Ubuntu system up-to-date is essential for security and stability. This section covers how to update and upgrade your system.</p>
+                    <p>In this section, we'll explore the process of updating and upgrading your Ubuntu system:</p>
+                    <ol>
+                        <li>
+                            <strong>Update Package Lists (apt update):</strong>
+                            <p>To update the package lists and get the latest information about available updates, run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt update</code>
+                            </div>
+                            <p>This command refreshes the package lists from the repositories.</p>
+                        </li>
+                        <li>
+                            <strong>Upgrade Installed Packages (apt upgrade):</strong>
+                            <p>To upgrade installed packages to their latest versions, use:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt upgrade</code>
+                            </div>
+                            <p>This command will prompt you to confirm the upgrade. Follow the prompts to proceed.</p>
+                        </li>
+                        <li>
+                            <strong>Upgrade to a New Ubuntu Release (do-release-upgrade):</strong>
+                            <p>To upgrade to a new Ubuntu release, you can use the do-release-upgrade command. This is typically used when a new LTS (Long Term Support) version is available.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo do-release-upgrade</code>
+                            </div>
+                            <p>Follow the on-screen instructions to perform the upgrade.</p>
+                        </li>
+                    </ol>
+                    <p>Regularly updating and upgrading your Ubuntu system ensures that you have the latest security patches and bug fixes, improving system stability and reliability.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Disk_Usage_and_Management">
+                <header>Disk Usage and Management</header>
+                <article>
+                    <p>Monitoring and managing disk space is crucial for maintaining system performance and ensuring you have enough storage for your files and applications.</p>
+                    <p>In this section, we'll explore how to check and manage disk usage:</p>
+                    <ol>
+                        <li>
+                            <strong>Check Disk Usage (df):</strong>
+                            <p>To check disk usage on your system, use the df command. It displays information about disk space usage for all mounted filesystems.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>df -h</code>
+                            </div>
+                            <p>The -h option makes the output human-readable, showing sizes in a more understandable format.</p>
+                        </li>
+                        <li>
+                            <strong>Check Directory Size (du):</strong>
+                            <p>To check the size of a specific directory and its contents, use the du command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>du -sh /path/to/directory</code>
+                            </div>
+                            <p>Replace /path/to/directory with the actual path to the directory you want to check.</p>
+                        </li>
+                        <li>
+                            <strong>Free Up Disk Space:</strong>
+                            <p>To free up disk space, consider removing unnecessary files or old log files. You can use commands like rm or find to locate and remove files.</p>
+                            <p>For example, to remove log files older than 7 days:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>find /var/log -type f -mtime +7 -exec rm {} \;</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Disk Partitioning (fdisk and gparted):</strong>
+                            <p>If you need to manage disk partitions, you can use tools like fdisk for the command-line interface or gparted for a graphical interface.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo fdisk /dev/sdX</code>
+                            </div>
+                            <p>Replace /dev/sdX with the appropriate disk device.</p>
+                        </li>
+                    </ol>
+                    <p>Properly managing disk space is essential for maintaining system health and ensuring that your Ubuntu system has enough storage for its operations. Regularly monitoring disk usage can help prevent storage-related issues.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Backup_and_Restore">
+                <header>Backup and Restore</header>
+                <article>
+                    <p>Regular backups are crucial to protect your data and system configurations. This section covers how to create backups and restore them in Ubuntu.</p>
+                    <p>In this section, we'll explore backup and restore procedures:</p>
+                    <ol>
+                        <li>
+                            <strong>Creating Backups with tar:</strong>
+                            <p>You can create compressed backups of files and directories using the tar command.</p>
+                            <p>To create a backup of a directory:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>tar -czvf backup.tar.gz /path/to/directory</code>
+                            </div>
+                            <p>Replace /path/to/directory with the directory you want to back up.</p>
+                        </li>
+                        <li>
+                            <strong>Restoring Backups with tar:</strong>
+                            <p>To restore a backup created with tar, use the tar command again.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>tar -xzvf backup.tar.gz -C /restore/location</code>
+                            </div>
+                            <p>Replace backup.tar.gz with the name of your backup file and /restore/location with the directory where you want to restore the files.</p>
+                        </li>
+                        <li>
+                            <strong>Using Backup Utilities:</strong>
+                            <p>Ubuntu offers various backup utilities, such as "Deja Dup" and "Duplicity," which provide graphical interfaces for creating and restoring backups.</p>
+                        </li>
+                        <li>
+                            <strong>Automating Backups:</strong>
+                            <p>To automate backups, you can use tools like rsync and cron to schedule regular backups.</p>
+                            <p>For example, to schedule a daily backup using rsync:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo crontab -e</code>
+                            </div>
+                            <p>Then, add a line like this to the crontab file:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>0 2 * * * rsync -avz /path/to/source /path/to/backup</code>
+                            </div>
+                            <p>This schedules a backup task to run daily at 2:00 AM.</p>
+                        </li>
+                    </ol>
+                    <p>Regular backups are essential for safeguarding your data and system configurations. They ensure that you can recover from data loss or system failures effectively.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Monitoring_and_Performance_Tuning">
+                <header>Monitoring and Performance Tuning</header>
+                <article>
+                    <p>Monitoring system performance and making necessary optimizations is essential to keep your Ubuntu system running smoothly.</p>
+                    <p>In this section, we'll explore how to monitor and optimize system performance:</p>
+                    <ol>
+                        <li>
+                            <strong>System Monitoring (top and htop):</strong>
+                            <p>You can use the top or htop commands to monitor system performance in real-time.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>top</code>
+                            </div>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>htop</code>
+                            </div>
+                            <p>These commands provide information about CPU usage, memory usage, and running processes.</p>
+                        </li>
+                        <li>
+                            <strong>Check Disk Space Usage (df):</strong>
+                            <p>Regularly check disk space usage using the df command to ensure you have enough storage.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>df -h</code>
+                            </div>
+                            <p>The -h option makes the output human-readable.</p>
+                        </li>
+                        <li>
+                            <strong>Monitor System Logs (tail and grep):</strong>
+                            <p>You can monitor system logs to identify issues and errors.</p>
+                            <p>For example, to monitor the syslog for error messages:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>tail -f /var/log/syslog | grep "error"</code>
+                            </div>
+                            <p>This command displays error messages as they are written to the syslog.</p>
+                        </li>
+                        <li>
+                            <strong>Performance Tuning:</strong>
+                            <p>Depending on your system's workload, you might need to tune various parameters to optimize performance. Common optimizations include adjusting system swappiness, tweaking kernel parameters, and configuring caching mechanisms. Always consult official documentation or reputable sources for specific performance tuning recommendations based on your use case.</p>
+                        </li>
+                    </ol>
+                    <p>Monitoring and optimizing system performance help maintain a responsive and efficient Ubuntu system.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Security_and_User_Authentication">
+                <header>Security and User Authentication</header>
+                <article>
+                    <p>Ensuring the security of your Ubuntu system is paramount. This section covers security best practices and user authentication methods.</p>
+                    <p>In this section, we'll explore security and user authentication:</p>
+                    <ol>
+                        <li>
+                            <strong>User Authentication (passwd and sudo):</strong>
+                            <p>Ensure strong user authentication by regularly updating passwords using the passwd command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>passwd username</code>
+                            </div>
+                            <p>Replace username with the name of the user whose password you want to change.</p>
+                        </li>
+                        <li>
+                            <strong>User Account Locking and Unlocking:</strong>
+                            <p>To lock a user account, preventing login, use the passwd command with the -l option:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo passwd -l username</code>
+                            </div>
+                            <p>To unlock the account, use the passwd command with the -u option:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo passwd -u username</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Firewall Configuration (ufw):</strong>
+                            <p>Ubuntu includes the Uncomplicated Firewall (ufw) for configuring firewall rules.</p>
+                            <p>To enable ufw:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo ufw enable</code>
+                            </div>
+                            <p>To allow incoming traffic on a specific port (e.g., SSH):</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo ufw allow 22/tcp</code>
+                            </div>
+                            <p>Always configure your firewall to allow only necessary services.</p>
+                        </li>
+                        <li>
+                            <strong>Security Updates (unattended-upgrades):</strong>
+                            <p>Set up automatic security updates to ensure your system stays protected from known vulnerabilities.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install unattended-upgrades<br>sudo dpkg-reconfigure --priority=low unattended-upgrades</code>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <strong>Root Account Security:</strong>
+                            <p>Disable the root account for improved security. Use sudo for administrative tasks.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo passwd -l root</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Use SSH Keys for Authentication:</strong>
+                            <p>Disable password-based SSH authentication and use SSH keys for enhanced security.</p>
+                            <p>Edit the SSH server configuration file:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo nano /etc/ssh/sshd_config</code>
+                            </div>
+                            <p>Set PasswordAuthentication to no.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>PasswordAuthentication no</code>
+                            </div>
+                            <p>Save and restart the SSH service:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl restart ssh</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Install Security Tools:</strong>
+                            <p>Consider installing security tools like Fail2ban for intrusion prevention and rkhunter for rootkit detection.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install fail2ban rkhunter</code>
+                            </div>
+                            <p>Implementing strong security practices is crucial for protecting your Ubuntu system from threats and vulnerabilities.</p>
+                        </li>
+                    </ol>
+                </article>
+            </section>
+            <section class="main-section" id="Web_Server_Setup_(Apache)">
+                <header>Web Server Setup (Apache)</header>
+                <article>
+                    <p>Setting up a web server is common for hosting websites and web applications. This section covers how to set up the Apache web server in Ubuntu.</p>
+                    <p>In this section, we'll explore how to set up the Apache web server:</p>
+                    <ol>
+                        <li>
+                            <strong>Install Apache (apache2):</strong>
+                            <p>To install the Apache web server, use the apt package manager.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install apache2</code>
+                            </div>
+                            <p>This command installs Apache and its dependencies.</p>
+                        </li>
+                        <li>
+                            <strong>Start and Enable Apache:</strong>
+                            <p>To start Apache and enable it to start automatically at boot, run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl start apache2<br>sudo systemctl enable apache2</code>
+                            </div>
+                            <p>This ensures that Apache is running and will be started on system boot.</p>
+                        </li>
+                        <li>
+                            <strong>Configure Virtual Hosts:</strong>
+                            <p>Virtual hosts allow you to host multiple websites on a single server. Create a virtual host configuration file for your website:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo nano /etc/apache2/sites-available/your_site.conf</code>
+                            </div>
+                            <p>Replace your_site.conf with a descriptive name for your site's configuration file. Inside this file, you can define your website's settings, including the document root and domain name.</p>
+                        </li>
+                        <li>
+                            <strong>Enable the Virtual Host:</strong>
+                            <p>After configuring the virtual host, enable it using the a2ensite command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo a2ensite your_site.conf</code>
+                            </div>
+                            <p>This command creates a symbolic link to your virtual host configuration in the sites-enabled directory.</p>
+                        </li>
+                        <li>
+                            <strong>Reload Apache Configuration:</strong>
+                            <p>To apply the changes, reload Apache's configuration.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl reload apache2</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Create a Sample Web Page:</strong>
+                            <p>Create an HTML file for your website's content in the document root directory specified in your virtual host configuration.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo nano /var/www/html/index.html</code>
+                            </div>
+                            <p>Populate this file with your website's content.</p>
+                        </li>
+                        <li>
+                            <strong>Access Your Website:</strong>
+                            <p>Open a web browser and enter your server's IP address or domain name to access your website.</p>
+                            <p>Setting up an Apache web server allows you to host websites and web applications on your Ubuntu system.</p>
+                        </li>
+                    </ol>
+                </article>
+            </section>
+            <section class="main-section" id="Database_Setup_(MySQL)">
+                <header>Database Setup (MySQL)</header>
+                <article>
+                    <p>Databases are essential for many web applications. This section covers how to set up the MySQL database server in Ubuntu.</p>
+                    <p>In this section, we'll explore how to set up the MySQL database server:</p>
+                    <ol>
+                        <li>
+                            <strong>Install MySQL Server (mysql-server):</strong>
+                            <p>To install the MySQL database server, use the apt package manager.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install mysql-server</code>
+                            </div>
+                            <p>During the installation, you'll be prompted to set a root password for MySQL.</p>
+                        </li>
+                        <li>
+                            <strong>Start and Enable MySQL:</strong>
+                            <p>Start the MySQL service and enable it to start automatically at boot.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl start mysql<br>sudo systemctl enable mysql</code>
+                            </div>
+                            <p>This ensures that MySQL is running and will be started on system boot.</p>
+                        </li>
+                        <li>
+                            <strong>Secure MySQL Installation:</strong>
+                            <p>Run the MySQL secure installation script to improve security.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo mysql_secure_installation</code>
+                            </div>
+                            <p>Follow the prompts to configure password policy, remove anonymous users, disallow remote root login, and remove the test database.</p>
+                        </li>
+                        <li>
+                            <strong>Access MySQL (mysql):</strong>
+                            <p>Access the MySQL server using the mysql client.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>mysql -u root -p</code>
+                            </div>                            
+                            <p>You'll be prompted to enter the root password you set during installation.</p>
+                        </li>
+                        <li>
+                            <strong>Create Databases and Users:</strong>
+                            <p>Use SQL commands to create databases and user accounts, and grant privileges as needed.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>SQL</span></div>
+                                <code>CREATE DATABASE dbname;</code>
+                            </div>
+                            <div class="code-main">
+                                <div class="code-header"><span>SQL</span></div>
+                                <code>CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';</code>
+                            </div>
+                            <div class="code-main">
+                                <div class="code-header"><span>SQL</span></div>
+                                <code>GRANT ALL PRIVILEGES ON dbname.* TO 'username'@'localhost';</code>
+                            </div>
+                            <p>Replace dbname, username, and password with your desired values.</p>
+                        </li>
+                    </ol>
+                    <p>Setting up MySQL allows you to manage databases and store data for web applications and services.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Version_Control_with_Git">
+                <header>Version Control with Git</header>
+                <article>
+                    <p>Git is a widely-used version control system for tracking changes in code repositories. This section covers how to set up and use Git in Ubuntu.</p>
+                    <p>In this section, we'll explore how to set up and use Git:</p>
+                    <ol>
+                        <li>
+                            <strong>Install Git (git):</strong>
+                            <p>To install Git, use the apt package manager.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install git</code>
+                            </div>
+                            <p>This command installs Git and its dependencies.</p>
+                        </li>
+                        <li>
+                            <strong>Configure Git User Information:</strong>
+                            <p>Configure your Git user name and email address:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>git config --global user.name "Your Name"<br>git config --global user.email "youremail@example.com"</code>
+                            </div>
+                            <p>Replace "Your Name" and "youremail@example.com" with your name and email.</p>
+                        </li>
+                        <li>
+                            <strong>Create a Git Repository:</strong>
+                            <p>To create a new Git repository, navigate to the project directory and run:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>git init</code>
+                            </div>
+                            <p>This initializes a new Git repository in the current directory.</p>
+                        </li>
+                        <li>
+                            <strong>Add and Commit Changes:</strong>
+                            <p>After making changes to your project, add the changes and commit them to the repository.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>git add .<br>git commit -m "Commit message"</code>
+                            </div>
+                            <p>Replace "Commit message" with a descriptive message for your commit.</p>
+                        </li>
+                        <li>
+                            <strong>Create a Remote Repository (e.g., GitHub):</strong>
+                            <p>To collaborate with others or back up your code, create a remote repository on platforms like GitHub, GitLab, or Bitbucket.</p>
+                            <p>Follow the platform-specific instructions to create a new repository.</p>
+                        </li>
+                        <li>
+                            <strong>Push to Remote Repository:</strong>
+                            <p>Push your local repository to the remote repository to share your code.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>git remote add origin remote_repository_url<br>git branch -M main<br>git push -u origin main</code>
+                            </div>
+                            <p>Replace remote_repository_url with the URL of your remote repository.</p>
+                        </li>
+                        <li>
+                            <strong>Clone a Remote Repository:</strong>
+                            <p>To clone an existing remote repository to your local machine, use the git clone command.</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>git clone remote_repository_url</code>
+                            </div>
+                            <p>Replace remote_repository_url with the URL of the repository you want to clone.</p>
+                        </li>
+                        <p>Git is a powerful version control system that helps you track changes, collaborate with others, and maintain a history of your project's development.</p>
+                    </ol>
+                </article>
+            </section>
+            <section class="main-section" id="Containerization_with_Docker">
+                <header>Containerization with Docker</header>
+                <article>
+                    <p>Docker is a popular containerization platform that allows you to package applications and their dependencies into containers. This section covers how to install and use Docker in Ubuntu.</p>
+                    <p>In this section, we'll explore how to install and use Docker:</p>
+                    <ol>
+                        <li>
+                            <strong>Install Docker:</strong>
+                            <p>To install Docker, you can use the Docker repository. First, update the package lists:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt update</code>
+                            </div>
+                            <p>Install necessary packages to allow apt to use a repository over HTTPS:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code>
+                            </div>
+                            <p>Add the Docker repository:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
+                            </div>
+                            <p>Finally, install Docker:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo apt update<br>sudo apt install docker-ce</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Start and Enable Docker:</strong>
+                            <p>Start the Docker service and enable it to start automatically at boot:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>sudo systemctl start docker<br>sudo systemctl enable docker</code>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Pull and Run a Docker Container:</strong>
+                            <p>To pull and run a Docker container, use the docker run command. For example, to run an Ubuntu container:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>docker run -it ubuntu</code>
+                            </div>
+                            <p>This command runs an interactive Ubuntu container. You can replace ubuntu with the name of the image you want to run.</p>
+                        </li>
+                        <li>
+                            <strong>Manage Docker Containers:</strong>
+                            <p>Use commands like docker ps, docker stop, and docker rm to manage Docker containers. For example, to stop and remove a container:</p>
+                            <div class="code-main">
+                                <div class="code-header"><span>hash</span></div>
+                                <code>docker stop container_name_or_id<br>docker rm container_name_or_id</code>
+                            </div>
+                        </li>
+                    </ol>
+                    <p>Docker is a powerful tool for containerization, allowing you to package applications and services with their dependencies in isolated environments.</p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
