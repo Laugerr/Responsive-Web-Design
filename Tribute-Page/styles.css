@@ -17,7 +17,6 @@ h1 {
 #main {
     background-image: linear-gradient(rgba(255, 255, 255, 0.795), rgba(170, 170, 169, 0.637)), url("./assets/images/Moroccan_Zelij.png");
     border-radius: 15px;
-    background-repeat: ;
     padding: 5px;
     margin: 25px 10px;
 }
