@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title>Product Landing Page</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="header">
+                <div class="logo">
+                    <a href="#">
+                        <img id="header-img" src="./assets/Golf-O2.png" alt="Golf-O2">
+                    </a>
+                </div>
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a class="nav-link" href="#features">Features</a></li>
+                        <li><a class="nav-link" href="#demonstration">Demonstration</a></li>
+                        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <section id="hero">
+                    <h2>NEWSLETTER SIGNUP</h2>
+                    <form action="https://www.freecodecamp.com/email-submit" id="form">
+                        <input type="email" id="email" name="email" placeholder="Enter your email address">
+                        <input type="submit" id="submit" value="Get Started">
+                    </form>
+                </section>
+                <section id="features">
+                    <div class="grid">
+                        <div class="icon"><i class="fa-brands fa-gripfire"></i></div>
+                        <div class="desc">
+                            <h2>Exceptional Craftsmanship</h2>
+                            <p>Our golf equipment is crafted using the finest materials, including high-quality metals and advanced composites. We source locally to ensure the highest standards, enhancing the longevity and performance of your purchase.</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="desc">
+                            <h2>Swift Delivery</h2>
+                            <p>We prioritize a swift shipping process to ensure you receive your golf equipment promptly. As soon as we finish crafting your order, it's on its way to you. Enjoy the convenience of quick delivery, and if you're not satisfied, take advantage of our hassle-free return policy.</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon"><i class="fa-solid fa-medal"></i></div>
+                        <div class="desc">
+                            <h2>Stringent Quality Checks</h2>
+                            <p>With every purchase, our team conducts thorough quality checks to guarantee your golf equipment is free from damages or faults. We meticulously test the performance, ensuring the optimal pitch and functionality of your instrument.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="demonstration">
+                    <iframe 
+                        id="video" 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/aIB8BnsrV3M?si=KWxly3mAxX5LY31B" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                    ></iframe>
+                </section>
+                <section id="pricing">
+                    <div class="product" id="yacool">
+                        <div class="level">Yacool</div>
+                        <h2>800</h2>
+                        <ol>
+                            <li>Adjustable loft and lie</li>
+                            <li>Graphite shaft for better feel</li>
+                            <li>Enhanced perimeter weighting</li>
+                        </ol>
+                        <button class="btn">Selecet</button>
+                    </div>
+                    <div class="product" id="reva">
+                        <div class="level">Reva</div>
+                        <h2>1000</h2>
+                        <ol>
+                            <li>High launch angle</li>
+                            <li>Forgiving clubhead</li>
+                            <li>Lightweight design</li>
+                        </ol>
+                        <button class="btn">Selecet</button>
+                    </div>
+                    <div class="product" id="ping">
+                        <div class="level">Ping</div>
+                        <h2>1500</h2>
+                        <ol>
+                            <li>Advanced aerodynamics</li>
+                            <li>Customizable fittings</li>
+                            <li>Multi-material construction</li>
+                        </ol>
+                        <button class="btn">Selecet</button>
+                    </div>
+                </section>
+                <footer>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <span>Copyright 2023, Golf-O</span>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

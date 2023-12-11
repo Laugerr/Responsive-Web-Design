@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Julius+Sans+One&family=Londrina+Outline&family=Monoton&display=swap');
+
+:root {
+    --black: #000000;
+    --rich-black: #0A0A0A;
+    --warm-charcoal: #333333;
+    --white: #ffffff;
+    --goldenrod: #DAA520;
+    --pale-gold: #E6DFA3;
+    --green: #008000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--rich-black)60%, var(--pale-gold));
+    color: var(--white);
+}
+
+/* ============Nav Bar============= */
+header {
+    position: fixed;
+    display: flex;
+    min-height: 60px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--goldenrod);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    color: var(--white);
+    transition: color 1s;
+}
+
+.logo {
+    width: 60vw;
+}
+
+#header-img {
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+nav > ul {
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav  ul {
+        flex-direction: column;
+    }
+}
+
+
+/* ==============Content================ */
+.content {
+    padding-top: 95px;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+section {
+    margin: 20px;
+}
+
+/* ===============HERO=============== */
+#hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero > h2 {
+    font-family: 'Monoton', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--goldenrod);
+}
+
+#form {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form > input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 2px;
+    border: 0;
+    color: var(--goldenrod);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#hero input[type=email] {
+    max-width: 275px;
+    width: 100%;
+    background-color: var(--pale-gold);
+    color: #000;
+}
+
+#form > input[type=submit] {
+    border: 0;
+    text-transform: uppercase;
+    background-color: var(--pale-gold);
+    color: var(--warm-charcoal);
+    box-shadow: var(--goldenrod) 1.95px 0.9px 15px;
+    font-weight: 800;
+}
+
+#form > input[type=submit]:hover {
+    color: var(--white);
+    background-color: var(--goldenrod);
+    box-shadow: var(--pale-gold) 1.95px 1.95px 10.6px;
+    transition: color 0.5s, background-color 1.5s, box-shadow 2s;
+}
+
+/* ===============FEATURES=============== */
+#features {
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+.grid {
+    display: flex;
+}
+
+#features .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--goldenrod);
+    width: 20vw;
+    height: 125px;
+    font-size: 50px;
+}
+
+#features .icon:hover {
+    transform: rotateY(360deg);
+    transition: transform 1.5s ease-in-out;
+}
+
+#features .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+}
+
+#features .desc h2 {
+    color: var(--goldenrod);
+}
+
+/* ===============DEMONSTRATION=============== */
+#demonstration {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===============PRICING=============== */
+#pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 15px;
+    border: 1px outset var(--goldenrod);
+    border-radius: 5px;
+}
+
+.product:hover {
+    box-shadow: var(--goldenrod) 1.95px 1.95px 15.6px;
+    transition: box-shadow 1s;
+}
+
+.product:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.product > .level {
+    width: 100%;
+    background-color: var(--goldenrod);
+    padding: 10px 0;
+    font-family: 'Monoton', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.product > h2 {
+    margin-top: 10px;
+}
+
+.product > h2::before {
+    content: "$";
+    color: var(--goldenrod);
+}
+
+.product > ol {
+    margin: 10px 0;
+}
+  
+.product > ol > li {
+    padding: 8px 0;
+}
+
+.product > .btn {
+    border: 0;
+    border-radius: 5px;
+    margin: 15px 20%;
+    width: auto;
+    padding: 10px;
+    background-color: var(--goldenrod);
+    color: var(--white);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.product > .btn:hover {
+    background-color: var(--white);
+    color: var(--goldenrod);
+    box-shadow: var(--goldenrod) 1.95px 1.95px 15.6px;
+    transition: background-color 1s, color 1s, box-shadow 1s;
+}
+
+@media (max-width: 802px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 350px;
+      width: 100%;
+      margin: 20px auto;
+      margin-bottom: 10px;
+    }
+}
+
+footer {
+    margin-top: 20px;
+    background-color: var(--goldenrod);
+    padding: 20px;
+    color: var(--white);
+}
+  
+footer > ul {
+    display: flex;
+    justify-content: center;
+}
+
+  
+footer > ul > li {
+    padding: 0 10px;
+}
+  
+footer > ul >li > a {
+    color: var(--white);
+}
+
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: dotted;
+    font-size: 12px;
+}
