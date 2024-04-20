@@ -8,7 +8,7 @@ This repository contains a collection of responsive web design projects created 
 2. [Tribute Page](#tribute-page) | ✅
 3. [Technical Documentation Page](#technical-documentation-page) | ✅
 4. [Product Landing Page](#product-landing-page) | ✅
-5. [Personal Portfolio WebPage](#personal-portfolio-webpage) | ⌛
+5. [Personal Portfolio WebPage](#personal-portfolio-webpage) | ✅
 
 ---
 
@@ -102,6 +102,30 @@ This repository contains a collection of responsive web design projects created 
 **Getting Started:**
 - No special prerequisites are required to run this project.
 - Clone the repository and open the `index.html` file in a web browser to view the product landing page.
+
+**Contributing:** Contributions are welcome. You can contribute to the project by submitting issues or pull requests.
+
+**License:** This project is licensed under the MIT License.
+
+---
+
+## Personal Portfolio WebPage
+
+**Description:** A responsive personal portfolio webpage project as part of the FreeCodeCamp Responsive Web Design projects.
+
+**Features:**
+- Responsive and visually appealing personal portfolio webpage.
+- Showcase of personal projects and skills.
+
+**Live Demo:** [Personal Portfolio WebPage Demo](#)
+
+**Technologies Used:**
+- HTML
+- CSS
+
+**Getting Started:**
+- No special prerequisites are required to run this project.
+- Clone the repository and open the `index.html` file in a web browser to view the personal portfolio webpage.
 
 **Contributing:** Contributions are welcome. You can contribute to the project by submitting issues or pull requests.
 
