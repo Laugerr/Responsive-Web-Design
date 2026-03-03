@@ -21,7 +21,7 @@ This repository contains a collection of responsive web design projects created 
 - User-friendly and visually appealing survey form.
 - Validation for user input.
 
-**Live Demo:** [Survey Form Demo](#)
+**Live Demo:** [Survey Form Demo](https://laugerr.github.io/Responsive-Web-Design/Survey-Form/)
 
 **Technologies Used:**
 - HTML
@@ -45,7 +45,7 @@ This repository contains a collection of responsive web design projects created 
 - Responsive and visually appealing tribute page.
 - Informative content about the person being paid tribute to.
 
-**Live Demo:** [Tribute Page Demo](#)
+**Live Demo:** [Tribute Page Demo](https://laugerr.github.io/Responsive-Web-Design/Tribute-Page/)
 
 **Technologies Used:**
 - HTML
@@ -69,7 +69,7 @@ This repository contains a collection of responsive web design projects created 
 - Responsive and well-structured technical documentation page.
 - Clear and organized documentation content.
 
-**Live Demo:** [Technical Documentation Page Demo](#)
+**Live Demo:** [Technical Documentation Page Demo](https://laugerr.github.io/Responsive-Web-Design/Technical-Documentation-Page/)
 
 **Technologies Used:**
 - HTML
@@ -93,7 +93,7 @@ This repository contains a collection of responsive web design projects created 
 - Responsive and visually engaging product landing page.
 - Product information and call-to-action elements.
 
-**Live Demo:** [Product Landing Page Demo](#)
+**Live Demo:** [Product Landing Page Demo](https://laugerr.github.io/Responsive-Web-Design/Product-Landing-Page/)
 
 **Technologies Used:**
 - HTML
@@ -117,7 +117,7 @@ This repository contains a collection of responsive web design projects created 
 - Responsive and visually appealing personal portfolio webpage.
 - Showcase of personal projects and skills.
 
-**Live Demo:** [Personal Portfolio WebPage Demo](#)
+**Live Demo:** [Personal Portfolio WebPage Demo](https://laugerr.github.io/)
 
 **Technologies Used:**
 - HTML
