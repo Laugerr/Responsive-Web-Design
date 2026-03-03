@@ -8,6 +8,7 @@
     --goldenrod: #DAA520;
     --pale-gold: #E6DFA3;
     --green: #008000;
+    --header-height: 84px;
 }
 
 * {
@@ -31,6 +32,7 @@ header {
     align-items: center;
     background-color: var(--goldenrod);
     padding: 10px;
+    z-index: 1000;
 }
 
 nav ul {
@@ -41,9 +43,13 @@ nav ul {
 }
 
 nav li {
-    margin-right: 30px;
+    margin-right: 24px;
     font-size: 20px;
     font-weight: 800;
+}
+
+nav li:last-child {
+    margin-right: 0;
 }
 
 a {
@@ -57,12 +63,12 @@ nav a:hover {
 }
 
 .logo {
-    width: 60vw;
+    width: min(60vw, 320px);
 }
 
 #header-img {
     max-width: 300px;
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -81,18 +87,33 @@ nav > ul {
 @media only screen and (max-width: 768px) {
     header {
         flex-wrap: wrap;
-        flex-direction: row;
+        justify-content: center;
+        gap: 6px 0;
+        padding: 8px 10px 12px;
     }
 
-    nav  ul {
+    .logo {
+        width: min(75vw, 280px);
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
         flex-direction: column;
+        gap: 8px;
+    }
+
+    nav li {
+        margin-right: 0;
     }
 }
 
 
 /* ==============Content================ */
 .content {
-    padding-top: 95px;
+    padding-top: calc(var(--header-height) + 16px);
     margin: 0 auto;
     max-width: 1000px;
     width: 100%;
@@ -168,6 +189,8 @@ section {
 
 .grid {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #features .icon {
@@ -175,7 +198,7 @@ section {
     justify-content: center;
     align-items: center;
     color: var(--goldenrod);
-    width: 20vw;
+    flex: 0 0 110px;
     height: 125px;
     font-size: 50px;
 }
@@ -189,8 +212,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 125px;
-    width: 80vw;
+    min-height: 125px;
+    width: 100%;
 }
 
 #features .desc h2 {
@@ -201,6 +224,14 @@ section {
 #demonstration {
     display: flex;
     justify-content: center;
+}
+
+#video {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
 }
 
 /* ===============PRICING=============== */
@@ -225,12 +256,8 @@ section {
 
 .product:hover {
     box-shadow: var(--goldenrod) 1.95px 1.95px 15.6px;
-    transition: box-shadow 1s;
-}
-
-.product:hover {
     transform: scale(1.1);
-    transition: transform 1s;
+    transition: transform 1s, box-shadow 1s;
 }
 
 .product > .level {
@@ -286,6 +313,70 @@ section {
       width: 100%;
       margin: 20px auto;
       margin-bottom: 10px;
+    }
+
+    .product:hover {
+      transform: none;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --header-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: calc(var(--header-height) + 22px);
+    }
+
+    .grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #features .icon {
+        flex-basis: auto;
+        width: 100%;
+        height: auto;
+        margin-top: 6px;
+    }
+
+    #features .desc {
+        min-height: auto;
+        padding-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --header-height: 190px;
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+
+    #hero > h2 {
+        font-size: 24px;
+    }
+
+    section {
+        margin: 16px 12px;
+    }
+
+    .product > .level {
+        font-size: 20px;
+    }
+
+    footer > ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    footer > span {
+        justify-content: center;
     }
 }
 
